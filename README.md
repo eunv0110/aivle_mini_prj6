@@ -145,43 +145,6 @@
 - **시계열 분해**: 뚜렷한 계절성과 추세 요소가 관찰됨
 - **공휴일 영향**: 공휴일과 주말에 판매량 증가 패턴이 관찰됨
 
-## 🛠️ 데이터 파이프라인 구성
-
-```python
-def create_pipeline(sales, orders, oil_price, products, stores, product_id, y_scale=True, use_3d=True, timesteps=7):
-    """
-    데이터 파이프라인 함수: 원시 데이터를 받아 모델링에 필요한 형태로 변환
-    
-    Parameters:
-    -----------
-    sales : DataFrame - 판매 데이터
-    orders : DataFrame - 주문 데이터
-    oil_price : DataFrame - 유가 데이터
-    products : DataFrame - 제품 정보 데이터
-    stores : DataFrame - 매장 정보 데이터
-    product_id : int - 대상 제품 ID (3, 12, 42)
-    y_scale : bool - 타겟 변수 스케일링 여부
-    use_3d : bool - 3차원 데이터 구조 변환 여부
-    timesteps : int - 시퀀스 길이 (3D 데이터 구조에 사용)
-    
-    Returns:
-    --------
-    x_test : array - 특성 데이터
-    y_test : array - 타겟 데이터
-    y_min : float - 타겟 변수 최소값 (스케일링 시 필요)
-    y_max : float - 타겟 변수 최대값 (스케일링 시 필요)
-    """
-    
-    # 제품별 파이프라인 실행
-    if product_id == 3:
-        return pipeline_product_3(sales, orders, oil_price, products, stores, y_scale, use_3d, timesteps)
-    elif product_id == 12:
-        return pipeline_product_12(sales, orders, oil_price, products, stores, y_scale, use_3d, timesteps)
-    elif product_id == 42:
-        return pipeline_product_42(sales, orders, oil_price, products, stores, y_scale, use_3d, timesteps)
-    else:
-        raise ValueError("지원되지 않는 제품 ID입니다. 3, 12, 42 중 하나를 선택하세요.")
-```
 
 ## 📈 모델링 결과
 
