@@ -1,6 +1,8 @@
 # 유통 판매량 예측 및 재고 최적화
 
 <div align="center">
+  <img src="https://github.com/user-attachments/assets/77833846-5d0e-49ee-b104-efb19262f075" alt="Beverage 시계열 분석" width="1200">
+
   <h3><i>"시계열 데이터 기반 판매량 예측 및 재고 최적화"</i></h3>
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
