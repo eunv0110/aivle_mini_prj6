@@ -486,6 +486,37 @@
 - **주요 강점**: 기회손실 없이 관리 가능한 유일한 상품
 - **권장 사항**: 계절적 추세를 활용한 장기 재고 계획 수립
 
+## 🌟 프로젝트 배운 점
+
+<div align="center">
+  <table>
+    <tr>
+      <td width="30%" align="center">📊<br><b>시계열 데이터 분석</b></td>
+      <td width="70%">상품마다 다르게 나타나는 요일별, 계절별, 월별 패턴을 분석하고 계절성/주기성을 파악하는 능력 향상</td>
+    </tr>
+    <tr>
+      <td align="center">🤖<br><b>딥러닝 모델 최적화</b></td>
+      <td>다중 LSTM 레이어와 Dropout을 적용한 모델이 효과적이며, 상품 특성에 맞는 아키텍처 선택의 중요성 학습</td>
+    </tr>
+    <tr>
+      <td align="center">⚙️<br><b>특성 공학 활용</b></td>
+      <td>지연 특성(lag features), 이동 평균, 파생 변수 생성을 통한 예측 정확도 향상 및 외부 변수 활용 경험</td>
+    </tr>
+    <tr>
+      <td align="center">📈<br><b>평가 지표 분석</b></td>
+      <td>MAE, MAPE, R² 등 다양한 지표와 비즈니스 관점 지표(재고회전율, 기회손실)를 통합적으로 분석하는 방법 습득</td>
+    </tr>
+    <tr>
+      <td align="center">🔍<br><b>상품별 접근 전략</b></td>
+      <td>Beverage(요일 패턴), Milk(방문자 상관관계), Agricultural products(계절성) 등 상품별 특성에 맞는 차별화된 전략 수립 능력</td>
+    </tr>
+    <tr>
+      <td align="center">💼<br><b>비즈니스 문제 해결</b></td>
+      <td>과재고와 재고부족 사이 최적 균형점을 찾고 데이터 기반 의사결정을 통한 실질적 비즈니스 가치 창출 방법 학습</td>
+    </tr>
+  </table>
+</div>
+
 ### 📋 향후 개선 방향
 
 1. **예측 모델 개선**
