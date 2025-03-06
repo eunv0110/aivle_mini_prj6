@@ -112,7 +112,8 @@
 ### 1️⃣ Product 3 (Beverage) 판매 패턴 분석
 
 <div align="center">
-  <img src="https://github.com/username/repository/blob/main/images/beverage_time_series.png" alt="Beverage 시계열 분석" width="700">
+
+  <img src="https://github.com/user-attachments/assets/363e3f28-1008-4e2e-905c-656e80a1e064" alt="Beverage 시계열 분석" width="700">
   <p><small>음료 판매량 추세 - 주중보다 주말에 판매량이 증가하는 패턴이 반복적으로 관찰됨</small></p>
 </div>
 
@@ -124,7 +125,7 @@
 - **계절성**: 월별/계절별 변동보다 요일별 변동이 더 지배적
 
 <div align="center">
-  <img src="https://github.com/username/repository/blob/main/images/beverage_weekday.png" alt="Beverage 요일별 분석" width="600">
+  <img src="https://github.com/user-attachments/assets/a90481ab-e734-400c-a496-816b0ab7808e" alt="Beverage 요일별 분석" width="600">
   <p><small>요일별 판매량 평균 - 주말(토요일, 일요일)에 판매량 증가</small></p>
 </div>
 
@@ -143,7 +144,11 @@
 - **장기 추세**: 전체 기간 동안 약간의 감소 추세
 
 <div align="center">
-  <img src="https://github.com/username/repository/blob/main/images/milk_customer_correlation.png" alt="Milk 고객수 상관관계" width="600">
+
+  <img src="https://github.com/user-attachments/assets/1a1190c0-ea8c-4b00-9f30-51fe17f99db2" alt="Milk 고객수 상관관계" width="600">
+  방문 고객 수와 우유 판매량의 추이
+ <img src="https://github.com/user-attachments/assets/0a64a03d-4719-4bb9-946f-2e48f59c0c88" alt="Milk 고객수 상관관계" width="600">
+  Customer Count and Milk Sales Quantity Correlation: 0.7123695976470086
   <p><small>방문 고객수와 우유 판매량의 상관관계 - 양의 상관관계 확인</small></p>
 </div>
 
