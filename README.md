@@ -2,7 +2,6 @@
 
 <div align="center">
   <h3><i>"시계열 데이터 기반 판매량 예측 및 재고 최적화"</i></h3>
-  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
@@ -82,48 +81,32 @@
     <tr>
       <td rowspan="3" width="10%">💻</td>
       <td width="20%"><b>언어</b></td>
-      <td width="25%">
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
-      </td>
+      <td width="25%">Python</td>
       <td width="45%">전체 프로젝트 개발</td>
     </tr>
     <tr>
       <td><b>데이터 처리</b></td>
-      <td>
-        <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/>
-        <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
-      </td>
+      <td>Pandas, NumPy</td>
       <td>데이터프레임 조작 및 전처리</td>
     </tr>
     <tr>
       <td><b>시각화</b></td>
-      <td>
-        <img src="https://img.shields.io/badge/Matplotlib-11557c?style=flat-square&logo=matplotlib&logoColor=white" alt="Matplotlib"/>
-        <img src="https://img.shields.io/badge/Seaborn-3776AB?style=flat-square&logo=seaborn&logoColor=white" alt="Seaborn"/>
-        <img src="https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white" alt="Plotly"/>
-      </td>
+      <td>Matplotlib, Seaborn, Plotly</td>
       <td>데이터 시각화 및 결과 표현</td>
     </tr>
     <tr>
       <td rowspan="3">🤖</td>
       <td rowspan="2"><b>모델링</b></td>
-      <td>
-        <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow"/>
-        <img src="https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white" alt="Keras"/>
-      </td>
+      <td>TensorFlow, Keras</td>
       <td>딥러닝 모델 구현 및 학습</td>
     </tr>
     <tr>
-      <td>
-        <img src="https://img.shields.io/badge/Scikit_learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/>
-      </td>
+      <td>Scikit-learn</td>
       <td>데이터 전처리, 모델 평가</td>
     </tr>
     <tr>
       <td><b>시계열 분석</b></td>
-      <td>
-        <img src="https://img.shields.io/badge/Statsmodels-4B8BBE?style=flat-square&logo=statsmodels&logoColor=white" alt="Statsmodels"/>
-      </td>
+      <td>Statsmodels</td>
       <td>시계열 데이터 분해 및 분석</td>
     </tr>
   </table>
