@@ -209,7 +209,7 @@
   <table>
     <tr>
       <th align="center" colspan="3" style="background-color:#f8f9fa">Baseline Model</th>
-      <th align="center" valign="middle" width="5%" rowspan="2">➡️<br><small>성능<br>개선</small></th>
+      <th align="center" valign="middle" width="5%" rowspan="2">➡️<br><small>모델<br>최적화</small></th>
       <th align="center" colspan="3" style="background-color:#f8f9fa">CNN Model</th>
     </tr>
     <tr>
@@ -242,16 +242,16 @@
       <th colspan="7" align="center" style="background-color:#f8f9fa">파라미터 및 특성 선택</th>
     </tr>
     <tr>
-      <th colspan="2">모델 설정</th>
-      <th colspan="5">특성 선택</th>
+      <th colspan="3">모델 설정</th>
+      <th colspan="4">특성 선택</th>
     </tr>
     <tr>
-      <td colspan="2">
+      <td colspan="3">
         • epoch=200<br>
         • Dropout(0.2)<br>
         • learning_rate=0.001
       </td>
-      <td colspan="5">
+      <td colspan="4">
         • 요일이 음료 판매 예측에 중요 요소<br>
         • 일주일 전 데이터로 예측 (요일별 변동 고려)<br>
         • CustomerCount, Pre_order, WTI_Price 변수 추가<br>
@@ -326,7 +326,7 @@
   <table>
     <tr>
       <th align="center" colspan="3" style="background-color:#f8f9fa">Baseline Model</th>
-      <th align="center" valign="middle" width="5%" rowspan="2">➡️<br><small>특성<br>추가</small></th>
+      <th align="center" valign="middle" width="5%" rowspan="2">➡️<br><small>모델<br>최적화</small></th>
       <th align="center" colspan="3" style="background-color:#f8f9fa">LSTM Model</th>
     </tr>
     <tr>
