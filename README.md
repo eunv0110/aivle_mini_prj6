@@ -156,7 +156,8 @@
 ### 3️⃣ Product 42 (Agricultural products) 판매 패턴 분석
 
 <div align="center">
-  <img src="https://github.com/username/repository/blob/main/images/agri_time_series.png" alt="Agricultural products 시계열 분석" width="700">
+
+  <img src="https://github.com/user-attachments/assets/61487d87-cbe1-4038-a02c-1766cada0867" alt="Agricultural products 시계열 분석" width="700">
   <p><small>농산물 판매량 추세 - 뚜렷한 계절적 패턴 관찰</small></p>
 </div>
 
@@ -168,7 +169,7 @@
 - **예측 용이성**: 뚜렷한 계절적 패턴으로 인해 다른 상품보다 예측이 상대적으로 용이
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/5b5c058a-d19c-4585-a498-c0e36d709" alt="농산물 시계열 분해" width="700">
+  <img src="https://github.com/user-attachments/assets/d4c31a09-8fe2-4611-b23a-7a03a84aac0a" alt="농산물 시계열 분해" width="700">
   <p><small>시계열 분해 결과 - 관측값(observed), 추세(trend), 계절성(seasonal), 잔차(residual) 요소로 분리</small></p>
 </div>
 
