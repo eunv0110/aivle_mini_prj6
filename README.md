@@ -1,3 +1,5 @@
+죄송합니다. 코드에서 실제로 시각화했던 그래프를 활용하는 것이 좋겠네요. 코드에 포함된 시각화 부분을 중심으로 README를 수정해 보겠습니다.
+
 # 유통 판매량 예측 및 재고 최적화
 
 ## 📋 프로젝트 개요
@@ -59,6 +61,41 @@
       <td><b>시계열 분석</b></td>
       <td>Statsmodels</td>
       <td>시계열 데이터 분해 및 분석</td>
+    </tr>
+  </table>
+</div>
+
+## 💡 프로젝트를 통해 배운 점
+
+<div align="center">
+  <table>
+    <tr>
+      <td width="30%" align="center">📊<br><b>시계열 데이터 분석</b></td>
+      <td width="70%">시계열 데이터의 분해와 패턴 인식 방법을 학습하고, 요일별, 월별, 계절별 패턴이 판매량 예측에 미치는 영향을 이해함</td>
+    </tr>
+    <tr>
+      <td align="center">🔄<br><b>LSTM 모델 최적화</b></td>
+      <td>복잡한 시계열 패턴 학습을 위한 LSTM 모델의 구조 설계와 하이퍼파라미터 최적화 기법을 습득하고, 다층 구조와 Dropout 적용 효과를 확인함</td>
+    </tr>
+    <tr>
+      <td align="center">🤖<br><b>데이터 파이프라인 구축</b></td>
+      <td>원시 데이터에서 모델 입력까지의 일관된 처리 과정을 구축하고, 상품별 특성에 맞는 전처리 방법과 파라미터 설정의 중요성을 인식함</td>
+    </tr>
+    <tr>
+      <td align="center">📈<br><b>재고 시뮬레이션</b></td>
+      <td>예측 모델의 결과를 활용한 재고 시뮬레이션 기법을 학습하고, 안전재고량과 기회손실 사이의 균형점을 찾는 방법을 습득함</td>
+    </tr>
+    <tr>
+      <td align="center">🔍<br><b>상품별 판매 패턴 분석</b></td>
+      <td>음료, 우유, 농산물 등 서로 다른 상품 카테고리의 고유한 판매 패턴과 외부 요인(방문객수, 요일 등)과의 상관관계를 분석하는 능력 향상</td>
+    </tr>
+    <tr>
+      <td align="center">⚙️<br><b>모듈화된 예측 시스템</b></td>
+      <td>모델링 과정을 독립적인 모듈로 분리함으로써 유지보수성을 높이고 단계별 성능 최적화가 가능한 구조 설계 방법 습득</td>
+    </tr>
+    <tr>
+      <td align="center">💼<br><b>비즈니스 평가 지표</b></td>
+      <td>단순한 예측 정확도를 넘어 재고 비용과 기회손실 같은 실질적인 비즈니스 성과 지표를 기반으로 모델을 평가하는 방법 학습</td>
     </tr>
   </table>
 </div>
@@ -168,25 +205,39 @@
 
 ### 📊 주요 패턴 분석
 
-#### Product 3 - Beverage
+#### Product 3 - Beverage 시계열 분석
+<div align="center">
+  <img src="https://raw.githubusercontent.com/username/repository/main/images/beverage_time_series.png" alt="Beverage 시계열 분석" width="700px" />
+  <p><small>4주, 3개월, 6개월, 1년, 전체 기간 판매량 추세 - 주말에 판매량이 증가하는 패턴 관찰</small></p>
+</div>
 
-- **요일별 판매 패턴**: 주말(토요일, 일요일)에 판매량이 증가하며, 평일 중에서는 월요일, 수요일, 금요일에 비교적 높은 판매량을 보임
-- **휘발유 가격 관계**: 휘발유 가격 변동과 판매량 사이에 특별한 상관관계가 관찰되지 않음
-- **연말 판매 증가**: 연말에는 고객 방문 수가 증가하며, 이에 따라 판매량도 평균적으로 증가하는 패턴을 보임
-- **장기적 판매 추세**: 전체 기간에서 평균 판매량이 점진적으로 증가하는 추세를 보임
+#### Product 3 - Beverage 요일별 분석
+<div align="center">
+  <img src="https://raw.githubusercontent.com/username/repository/main/images/beverage_weekday.png" alt="Beverage 요일별 분석" width="600px" />
+  <p><small>요일별 판매량 평균 - 주말(토요일, 일요일)에 판매량 증가</small></p>
+</div>
 
-#### Product 12 - Milk
+#### Product 42 - Agricultural products 시계열 분해
+<div align="center">
+  <img src="https://raw.githubusercontent.com/username/repository/main/images/agri_decomposition.png" alt="농산물 시계열 분해" width="700px" />
+  <p><small>시계열 분해 결과 - 관측값(observed), 추세(trend), 계절성(seasonal), 잔차(residual) 요소로 분리</small></p>
+</div>
 
-- **월별 판매 패턴**: 12월에 전체적인 판매량이 높으며, 특히 중순에 가장 높은 판매량이 관찰됨
-- **방문자 수와 판매량 관계**: 방문자 수가 많아질수록 판매량도 증가하는 경향을 보임
-- **주말 판매 증가**: 주말에는 평일보다 판매량이 높은 경향이 관찰됨
-- **카테고리 내 비교**: 동일 카테고리 내에서 가장 높은 판매량을 기록
+## 🧠 모델 학습 결과
 
-#### Product 42 - Agricultural products
+### 📊 LSTM 모델 학습 과정
 
-- **계절적 패턴**: 7월(여름)에 판매량이 피크를 찍고, 1월(겨울)에 최저점을 기록하는 뚜렷한 계절적 패턴을 보임
-- **시계열 분해**: 뚜렷한 계절성과 추세 요소가 관찰됨
-- **공휴일 영향**: 공휴일과 주말에 판매량 증가 패턴이 관찰됨
+<div align="center">
+  <img src="https://raw.githubusercontent.com/username/repository/main/images/lstm_learning_curve.png" alt="LSTM 학습 곡선" width="600px" />
+  <p><small>LSTM 모델 학습 곡선 - 훈련 손실(train_err)과 검증 손실(val_err)의 변화</small></p>
+</div>
+
+### 📊 예측 결과 시각화
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/username/repository/main/images/prediction_visualization.png" alt="예측 결과 시각화" width="700px" />
+  <p><small>훈련 데이터(train), 검증 데이터(val), 예측 결과(pred) 비교</small></p>
+</div>
 
 ## 📈 모델링 결과
 
@@ -336,127 +387,10 @@
   </ul>
 </div>
 
-### 📊 테스트 데이터 성능 평가
-
-<div>
-  <h4>최종 모델의 테스트 데이터 성능</h4>
-  <table>
-    <tr>
-      <th>상품</th>
-      <th>MAE</th>
-      <th>MAPE</th>
-      <th>R² Score</th>
-    </tr>
-    <tr>
-      <td>Product 3 (Beverage)</td>
-      <td>6757.75</td>
-      <td>0.540</td>
-      <td>-2.600</td>
-    </tr>
-    <tr>
-      <td>Product 12 (Milk)</td>
-      <td>7919.61</td>
-      <td>0.678</td>
-      <td>-6.744</td>
-    </tr>
-    <tr>
-      <td>Product 42 (Agricultural products)</td>
-      <td>969.66</td>
-      <td>8.812</td>
-      <td>-4621.231</td>
-    </tr>
-  </table>
-</div>
-
 ### 📊 재고 시뮬레이션 결과
 
-#### Product 3 - Beverage
-<div>
-  <h4>안전재고량에 따른 재고 시뮬레이션 결과</h4>
-  <table>
-    <tr>
-      <th>안전재고량</th>
-      <th>일평균 재고량</th>
-      <th>일평균 재고금액($)</th>
-      <th>일평균 재고회전율</th>
-      <th>기회손실 수량</th>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>2600.929</td>
-      <td>20807.432</td>
-      <td>7.468</td>
-      <td>136273.0</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>2603.548</td>
-      <td>20828.384</td>
-      <td>7.459</td>
-      <td>136183.0</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>2606.167</td>
-      <td>20849.336</td>
-      <td>7.450</td>
-      <td>136093.0</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td>2608.786</td>
-      <td>20870.288</td>
-      <td>7.441</td>
-      <td>136003.0</td>
-    </tr>
-  </table>
-</div>
-
-#### Product 12 - Milk
-<div>
-  <h4>안전재고량에 따른 재고 시뮬레이션 결과</h4>
-  <table>
-    <tr>
-      <th>안전재고량</th>
-      <th>일평균 재고량</th>
-      <th>일평균 재고금액($)</th>
-      <th>일평균 재고회전율</th>
-      <th>기회손실 수량</th>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>2002.435</td>
-      <td>12014.610</td>
-      <td>12.250</td>
-      <td>161085.0</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>2005.043</td>
-      <td>12030.258</td>
-      <td>12.225</td>
-      <td>160985.0</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>2007.652</td>
-      <td>12045.912</td>
-      <td>12.201</td>
-      <td>160885.0</td>
-    </tr>
-    <tr>
-      <td>20</td>
-      <td>2010.261</td>
-      <td>12061.566</td>
-      <td>12.176</td>
-      <td>160785.0</td>
-    </tr>
-  </table>
-</div>
-
-#### Product 42 - Agricultural products
-<div>
-  <h4>안전재고량에 따른 재고 시뮬레이션 결과</h4>
+<div align="center">
+  <h4>Product 42 - Agricultural products 재고 시뮬레이션 결과</h4>
   <table>
     <tr>
       <th>안전재고량</th>
@@ -494,11 +428,12 @@
       <td>0.0</td>
     </tr>
   </table>
+  <p><small>농산물(제품 42)의 경우 안전재고량 5에서도 기회손실이 0으로 효과적인 재고 관리가 가능</small></p>
 </div>
 
 ### 📈 최적 안전재고량 결정
 
-<div>
+<div align="center">
   <h4>최종 재고 평가 결과</h4>
   <table>
     <tr>
@@ -532,41 +467,6 @@
       <td>6584.530</td>
       <td>0.301</td>
       <td>0.0</td>
-    </tr>
-  </table>
-</div>
-
-## 💡 프로젝트를 통해 배운 점
-
-<div align="center">
-  <table>
-    <tr>
-      <td width="30%" align="center">📊<br><b>시계열 데이터 분석</b></td>
-      <td width="70%">시계열 데이터의 분해와 패턴 인식 방법을 학습하고, 요일별, 월별, 계절별 패턴이 판매량 예측에 미치는 영향을 이해함</td>
-    </tr>
-    <tr>
-      <td align="center">🔄<br><b>LSTM 모델 최적화</b></td>
-      <td>복잡한 시계열 패턴 학습을 위한 LSTM 모델의 구조 설계와 하이퍼파라미터 최적화 기법을 습득하고, 다층 구조와 Dropout 적용 효과를 확인함</td>
-    </tr>
-    <tr>
-      <td align="center">🤖<br><b>데이터 파이프라인 구축</b></td>
-      <td>원시 데이터에서 모델 입력까지의 일관된 처리 과정을 구축하고, 상품별 특성에 맞는 전처리 방법과 파라미터 설정의 중요성을 인식함</td>
-    </tr>
-    <tr>
-      <td align="center">📈<br><b>재고 시뮬레이션</b></td>
-      <td>예측 모델의 결과를 활용한 재고 시뮬레이션 기법을 학습하고, 안전재고량과 기회손실 사이의 균형점을 찾는 방법을 습득함</td>
-    </tr>
-    <tr>
-      <td align="center">🔍<br><b>상품별 판매 패턴 분석</b></td>
-      <td>음료, 우유, 농산물 등 서로 다른 상품 카테고리의 고유한 판매 패턴과 외부 요인(방문객수, 요일 등)과의 상관관계를 분석하는 능력 향상</td>
-    </tr>
-    <tr>
-      <td align="center">⚙️<br><b>모듈화된 예측 시스템</b></td>
-      <td>모델링 과정을 독립적인 모듈로 분리함으로써 유지보수성을 높이고 단계별 성능 최적화가 가능한 구조 설계 방법 습득</td>
-    </tr>
-    <tr>
-      <td align="center">💼<br><b>비즈니스 평가 지표</b></td>
-      <td>단순한 예측 정확도를 넘어 재고 비용과 기회손실 같은 실질적인 비즈니스 성과 지표를 기반으로 모델을 평가하는 방법 학습</td>
     </tr>
   </table>
 </div>
