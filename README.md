@@ -132,7 +132,9 @@
 ### 2️⃣ Product 12 (Milk) 판매 패턴 분석
 
 <div align="center">
-  <img src="https://github.com/username/repository/blob/main/images/milk_time_series.png" alt="Milk 시계열 분석" width="700">
+  <img src="https://github.com/user-attachments/assets/dd7d1d7a-5705-466d-a96c-8f857bcc3833" alt="Milk 시계열 분석" width="700">
+  <img src="https://github.com/user-attachments/assets/ee96cae7-deab-4294-bcbe-10d8e3900f67" alt="Milk 시계열 분석" width="700">
+
   <p><small>우유 판매량 추세 - 주말 증가 및 12월 판매량 상승 패턴</small></p>
 </div>
 
