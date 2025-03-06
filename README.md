@@ -206,118 +206,107 @@
 #### Product 3 (Beverage) 모델 성능
 
 <div align="center">
-  <h4>Baseline Model</h4>
-  <img src="https://github.com/user-attachments/assets/7460e366-7dde-4064-b6b3-44738a08d72d" alt="Beverage Baseline 학습 곡선" width="600">
-  
   <table>
     <tr>
-      <th>MAE</th>
-      <th>MAPE</th>
-      <th>R²</th>
+      <td align="center" colspan="2">
+        <h4>Baseline Model</h4>
+        <img src="https://github.com/user-attachments/assets/7460e366-7dde-4064-b6b3-44738a08d72d" alt="Beverage Baseline 학습 곡선" width="500">
+        <p>MAE: 2164.1002 | MAPE: 0.1720 | R²: 0.1426</p>
+      </td>
+      <td align="center" valign="middle" width="5%">➡️</td>
+      <td align="center" colspan="2">
+        <h4>하이퍼파라미터 튜닝 후 (CNN Model)</h4>
+        <img src="https://github.com/user-attachments/assets/bdd4eb46-df0e-40c4-a325-a04fee348f38" alt="Beverage CNN 학습 곡선" width="500">
+        <p>MAE: 1810.8886 | MAPE: 0.1564 | R²: 0.6223</p>
+      </td>
     </tr>
     <tr>
-      <td>2164.1002</td>
-      <td>0.1720</td>
-      <td>0.1426</td>
+      <td colspan="5" align="center"><h4>파라미터 및 특성 선택</h4></td>
+    </tr>
+    <tr>
+      <td>epoch=200, Dropout(0.2), learning_rate=0.001</td>
+      <td>요일이 음료 판매를 예측하는데 중요한 요소로 확인됨</td>
+      <td colspan="3">요일에 따라 변동이 크므로 이틀전이 아닌 일주일 전에 미리 예측</td>
+    </tr>
+    <tr>
+      <td>CustomerCount, Pre_order, WTI_Price 변수 추가</td>
+      <td colspan="4">요일 변수를 int형 숫자로 변경</td>
     </tr>
   </table>
-
-  <h4>하이퍼파라미터 튜닝 후 (CNN Model)</h4>
-  <img src="https://github.com/user-attachments/assets/bdd4eb46-df0e-40c4-a325-a04fee348f38" alt="Beverage CNN 학습 곡선" width="600">
-  
-  <table>
-    <tr>
-      <th>MAE</th>
-      <th>MAPE</th>
-      <th>R²</th>
-    </tr>
-    <tr>
-      <td>1810.8886</td>
-      <td>0.1564</td>
-      <td>0.6223</td>
-    </tr>
-  </table>
-  
-  <h4>파라미터 및 특성 선택</h4>
-  <ul align="left">
-    <li>epoch=200, Dropout(0.2), learning_rate=0.001</li>
-    <li>요일이 음료 판매를 예측하는데 중요한 요소로 확인됨</li>
-    <li>요일에 따라 변동이 크므로 이틀전이 아닌 일주일 전에 미리 예측</li>
-    <li>CustomerCount, Pre_order, WTI_Price 변수 추가</li>
-    <li>요일 변수를 int형 숫자로 변경</li>
-  </ul>
 </div>
 
 #### Product 12 (Milk) 모델 성능
 
 <div align="center">
-  <h4>Baseline Model</h4>
-  <img src="https://github.com/user-attachments/assets/d47fd744-c457-4633-95e5-5b261f925047" alt="Milk Baseline 학습 곡선" width="600">
-  
   <table>
     <tr>
-      <th>MAE</th>
-      <th>MAPE</th>
-      <th>R²</th>
+      <td align="center" colspan="2">
+        <h4>Baseline Model</h4>
+        <img src="https://github.com/user-attachments/assets/d47fd744-c457-4633-95e5-5b261f925047" alt="Milk Baseline 학습 곡선" width="500">
+        <p>MAE: 2857.6650 | MAPE: 0.2139 | R²: -0.4383</p>
+      </td>
+      <td align="center" valign="middle" width="5%">➡️</td>
+      <td align="center" colspan="2">
+        <h4>LSTM Model</h4>
+        <img src="https://github.com/user-attachments/assets/aefcf645-e646-4d1a-8860-daf03af282eb" alt="Milk LSTM 학습 곡선" width="500">
+        <p>MAE: 2092.8562 | MAPE: 0.1818 | R²: 0.3686</p>
+      </td>
     </tr>
     <tr>
-      <td>2857.6650</td>
-      <td>0.2139</td>
-      <td>-0.4383</td>
+      <td colspan="5" align="center"><h4>파라미터 및 특성 선택</h4></td>
+    </tr>
+    <tr>
+      <td>epoch=100, LSTM(64,32,16), Dense(8), Dropout(0.2)</td>
+      <td>방문고객 수가 우유랑의 판매를 예측하는데 중요한 요소로 확인됨</td>
+      <td colspan="3">판매수량 및 가격과 리드타임 정보 merge</td>
+    </tr>
+    <tr>
+      <td>매장 정보, 유가 정보, 고객 방문수 정보 추가</td>
+      <td>봄, 여름, 가을, 겨울 계절 별 변수 추가</td>
+      <td colspan="3">미국 연방 공휴일 캘린더 클래스 추가</td>
+    </tr>
+    <tr>
+      <td colspan="5">요일 변수 생성 및 이틀 시차 변수 생성</td>
     </tr>
   </table>
-
-  <h4>LSTM Model</h4>
-  <img src="https://github.com/user-attachments/assets/aefcf645-e646-4d1a-8860-daf03af282eb" alt="Milk LSTM 학습 곡선" width="600">
-  
-  <table>
-    <tr>
-      <th>MAE</th>
-      <th>MAPE</th>
-      <th>R²</th>
-    </tr>
-    <tr>
-      <td>2092.8562</td>
-      <td>0.1818</td>
-      <td>0.3686</td>
-    </tr>
-  </table>
-  
-  <h4>파라미터 및 특성 선택</h4>
-  <ul align="left">
-    <li>epoch=100, LSTM(64,32,16), Dense(8), Dropout(0.2)</li>
-    <li>방문고객 수가 우유랑의 판매를 예측하는데 중요한 요소로 확인됨</li>
-    <li>판매수량 및 가격과 리드타임 정보 merge</li>
-    <li>매장 정보, 유가 정보, 고객 방문수 정보 추가</li>
-    <li>봄, 여름, 가을, 겨울 계절 별 변수 추가</li>
-    <li>미국 연방 공휴일 캘린더 클래스 추가</li>
-    <li>요일 변수 생성 및 이틀 시차 변수 생성</li>
-  </ul>
 </div>
 
 #### Product 42 (Agricultural products) 모델 성능
 
 <div align="center">
-  <h4>Baseline Model</h4>
-  <img src="https://github.com/user-attachments/assets/fa8acb7c-cd40-4d28-b071-0a46dfe4de59" alt="Agricultural Baseline 학습 곡선" width="600">
-  <p>MAE: 9.16 (사용된 특징: Qty, CustomerCount)</p>
-
-  <h4>하이퍼파라미터 튜닝 후</h4>
-  <img src="https://github.com/user-attachments/assets/d1ddf23f-b675-405d-bd3b-2ff656d2c162" alt="Agricultural 튜닝 후 학습 곡선" width="600">
-  <p>MAE: 8.37</p>
-  
-  <h4>특성 선택 및 모델링 전략</h4>
-  <ul align="left">
-    <li><b>날짜적인 특징</b>: 공휴일 여부, 요일별 데이터, 판매량 평균보다 높은 달에 대한 정보, 여름 여부</li>
-    <li><b>외부적 특징</b>: 유가 데이터</li>
-    <li><b>시계열 분해 특징</b>: Trend, Seasonal, Residual</li>
-    <li><b>가격적인 특징</b>: Total Price = (Price * Qty)</li>
-    <li>BaseColumn으로 Qty와 CustomerCount 사용</li>
-    <li>LSTM으로 BaseModel 구성</li>
-    <li>이틀 시차 변수 생성</li>
-    <li>고객 수 증가율 계산</li>
-    <li>IsOverQtyMonth: 판매량 평균이 넘어가는 달을 체크해서 넘으면 1, 안넘으면 0</li>
-  </ul>
+  <table>
+    <tr>
+      <td align="center" colspan="2">
+        <h4>Baseline Model</h4>
+        <img src="https://github.com/user-attachments/assets/fa8acb7c-cd40-4d28-b071-0a46dfe4de59" alt="Agricultural Baseline 학습 곡선" width="500">
+        <p>MAE: 9.16 (사용된 특징: Qty, CustomerCount)</p>
+      </td>
+      <td align="center" valign="middle" width="5%">➡️</td>
+      <td align="center" colspan="2">
+        <h4>하이퍼파라미터 튜닝 후</h4>
+        <img src="https://github.com/user-attachments/assets/d1ddf23f-b675-405d-bd3b-2ff656d2c162" alt="Agricultural 튜닝 후 학습 곡선" width="500">
+        <p>MAE: 8.37</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5" align="center"><h4>특성 선택 및 모델링 전략</h4></td>
+    </tr>
+    <tr>
+      <td><b>날짜적인 특징</b>: 공휴일 여부, 요일별 데이터, 판매량 평균보다 높은 달에 대한 정보, 여름 여부</td>
+      <td><b>외부적 특징</b>: 유가 데이터</td>
+      <td colspan="3"><b>시계열 분해 특징</b>: Trend, Seasonal, Residual</td>
+    </tr>
+    <tr>
+      <td><b>가격적인 특징</b>: Total Price = (Price * Qty)</td>
+      <td>BaseColumn으로 Qty와 CustomerCount 사용</td>
+      <td colspan="3">LSTM으로 BaseModel 구성</td>
+    </tr>
+    <tr>
+      <td>이틀 시차 변수 생성</td>
+      <td>고객 수 증가율 계산</td>
+      <td colspan="3">IsOverQtyMonth: 판매량 평균이 넘어가는 달을 체크해서 넘으면 1, 안넘으면 0</td>
+    </tr>
+  </table>
 </div>
 
 <div align="center">
