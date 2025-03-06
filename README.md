@@ -133,8 +133,9 @@
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/dd7d1d7a-5705-466d-a96c-8f857bcc3833" alt="Milk 시계열 분석" width="700">
+  12월 판매량 상승
   <img src="https://github.com/user-attachments/assets/ee96cae7-deab-4294-bcbe-10d8e3900f67" alt="Milk 시계열 분석" width="700">
-
+주말 증가
   <p><small>우유 판매량 추세 - 주말 증가 및 12월 판매량 상승 패턴</small></p>
 </div>
 
@@ -169,7 +170,8 @@
 - **예측 용이성**: 뚜렷한 계절적 패턴으로 인해 다른 상품보다 예측이 상대적으로 용이
 
 <div align="center">
-  <img src="https://github.com/username/repository/blob/main/images/agri_decomposition.png" alt="농산물 시계열 분해" width="700">
+
+  <img src="https://github.com/user-attachments/assets/5b5c058a-d19c-4585-a498-c0e36d709" alt="농산물 시계열 분해" width="700">
   <p><small>시계열 분해 결과 - 관측값(observed), 추세(trend), 계절성(seasonal), 잔차(residual) 요소로 분리</small></p>
 </div>
 
